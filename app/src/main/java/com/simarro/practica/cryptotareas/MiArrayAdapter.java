@@ -42,9 +42,9 @@ public class MiArrayAdapter<T> extends ArrayAdapter<T> {
 
 
 
-        titulo.setText(item.getNombre());
-        protocolo.setText(item.getProtocolo());
-        precio.setText(item.getPrecioAct()+"");
+        titulo.setText(item.getNombre().trim());
+        protocolo.setText(item.getProtocolo().trim());
+        precio.setText(item.getPrecioAct()+"".trim());
         logo.setImageResource(item.getImagenView());
 
         return listaItemView;
