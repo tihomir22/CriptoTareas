@@ -5,12 +5,14 @@ public class Criptomoneda {
     private String nombre;
     private String protocolo;
     private double precioAct;
+    private String url;
     private int imagenView;
 
-    public Criptomoneda(String nombre, String protocolo, double precioAct, int imagenView) {
+    public Criptomoneda(String nombre, String protocolo, double precioAct, String url, int imagenView) {
         this.nombre = nombre;
         this.protocolo = protocolo;
         this.precioAct = precioAct;
+        this.url = url;
         this.imagenView = imagenView;
     }
 
@@ -46,13 +48,24 @@ public class Criptomoneda {
         this.imagenView = imagenView;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     @Override
     public String toString() {
         return "Criptomoneda{" +
                 "nombre='" + nombre + '\'' +
                 ", protocolo='" + protocolo + '\'' +
                 ", precioAct=" + precioAct +
+                ", url='" + url + '\'' +
                 ", imagenView=" + imagenView +
                 '}';
     }
+
+
 }
